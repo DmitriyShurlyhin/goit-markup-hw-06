@@ -364,6 +364,60 @@
               <use href="./images/sprite.svg#icon-close"></use>
             </svg>
           </button>
+          <h2 class="modal-name">Оставьте свои данные, мы вам перезвоним</h2>
+          <form action="">
+            <div class="field username">
+              <label for="">
+                <div class="name">Имя</div>
+                <div class="input-cont">
+                  <input type="text" name="username" />
+                  <svg class="modal-icon" width="18" height="18">
+                    <use href="./images/sprite.svg#icon-name"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="field phonenum">
+              <label for="">
+                <div class="name">Телефон</div>
+                <div class="input-cont">
+                  <input type="tel" name="phonenumber" />
+                  <svg class="modal-icon" width="18" height="18">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="field mail">
+              <label for="">
+                <div class="name">Почта</div>
+                <div class="input-cont">
+                  <input type="email" name="email" />
+                  <svg class="modal-icon" width="18" height="18">
+                    <use href="./images/sprite.svg#icon-mail-mod"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="field comment">
+              <label for="">
+                <div class="name">Комментарий</div>
+                <textarea
+                  name="comment"
+                  rows="10"
+                  placeholder="Введите текст"
+                ></textarea>
+              </label>
+            </div>
+            <div class="check">
+              <label for="">
+                <input type="checkbox" name="agreement" value="agree" />
+                Соглашаюсь с рассылкой и принимаю
+                <a href="">Условия договора</a>
+              </label>
+            </div>
+            <button type="submit">Отправить</button>
+          </form>
         </div>
       </div>
     </main>
@@ -431,17 +485,15 @@
               name="email"
               id="email"
               placeholder="E-mail"
-              autofocus
             />
           </div>
-          <!-- <div class="button-container"> -->
+
           <button class="btn-submit" type="submit">
             Подписаться
             <svg width="24" height="24" class="btn-icon">
               <use href="./images/sprite.svg#icon-send"></use>
             </svg>
           </button>
-          <!-- </div> -->
         </form>
       </div>
     </footer>
