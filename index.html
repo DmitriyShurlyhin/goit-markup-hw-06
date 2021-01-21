@@ -421,12 +421,27 @@
             </li>
           </ul>
         </div>
-        <form action="">
-          <label for="">
-            Подпишитесь на рассылку
-            <input type="email" name="email" />
-          </label>
-          <button type="submit">Подписаться</button>
+        <form class="subscribe-form">
+          <div class="subscribe-field">
+            <label class="subscribe-label" for="email">
+              Подпишитесь на рассылку </label
+            ><input
+              class="subscribe-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              autofocus
+            />
+          </div>
+          <!-- <div class="button-container"> -->
+          <button class="btn-submit" type="submit">
+            Подписаться
+            <svg width="24" height="24" class="btn-icon">
+              <use href="./images/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+          <!-- </div> -->
         </form>
       </div>
     </footer>
