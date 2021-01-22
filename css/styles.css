@@ -555,6 +555,35 @@ textarea::placeholder {
   text-decoration: underline;
   color: var(--accent-background-color);
 }
+.check-label {
+  outline: 1px solid red;
+  display: inline-flex;
+  align-items: center;
+}
+.check-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin-right: 7px;
+  background-color: red;
+  /* position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: ' ';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-dark);
+  border-radius: 2px;
+  background-color: red; */
+}
+.box:checked ~ .check-label::before {
+  background-color: blue;
+}
 .btn-send {
   display: flex;
   align-items: center;
