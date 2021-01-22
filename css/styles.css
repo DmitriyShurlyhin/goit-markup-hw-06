@@ -556,7 +556,6 @@ textarea::placeholder {
   color: var(--accent-background-color);
 }
 .check-label {
-  outline: 1px solid red;
   display: inline-flex;
   align-items: center;
 }
@@ -568,21 +567,20 @@ textarea::placeholder {
   border: 2px solid black;
   border-radius: 2px;
   margin-right: 7px;
-  background-color: red;
-  /* position: absolute;
-  left: 42px;
-  top: 50%;
-  transform: translateY(-50%);
-  content: ' ';
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--color-dark);
-  border-radius: 2px;
-  background-color: red; */
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.box:focus + .check-label::before {
+  border: 2px solid var(--accent-background-color);
 }
 .box:checked ~ .check-label::before {
-  background-color: blue;
+  background-color: var(--accent-background-color);
+  background-image: url('../images/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-background-color);
 }
 .btn-send {
   display: flex;
@@ -605,7 +603,7 @@ textarea::placeholder {
   border: none;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 25 0ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-send:hover,
 .btn-send:focus {
